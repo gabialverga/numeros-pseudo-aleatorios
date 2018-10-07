@@ -22,7 +22,6 @@ function load(){
     b = parseInt(document.getElementById("b").value);
     m = parseInt(document.getElementById("m").value);
     seed = parseInt(document.getElementById("seed").value);
-    console.log(a,b,m,seed);
     draw();
 }
 
