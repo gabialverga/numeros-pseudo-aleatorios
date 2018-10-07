@@ -1,0 +1,19 @@
+canvas{
+    border-style: outset ;
+    border-color: #B65EBA;
+    background-color:rgb(0, 162, 232);
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #64E8DE, #8A64EB);
+    background-repeat: no-repeat;
+}
+
+h1{
+    width: 100%;
+}
