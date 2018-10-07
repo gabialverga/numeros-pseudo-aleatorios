@@ -18,10 +18,11 @@ function gerador(){
 function load(){
     ctxCanvas.clearRect(0, 0, canvas.width, canvas.height);
     y=0;
-    a = document.getElementById("a").value;
-    b = document.getElementById("b").value;
-    m = document.getElementById("m").value;
-    seed = document.getElementById("seed").value;
+    a = parseInt(document.getElementById("a").value);
+    b = parseInt(document.getElementById("b").value);
+    m = parseInt(document.getElementById("m").value);
+    seed = parseInt(document.getElementById("seed").value);
+    console.log(a,b,m,seed);
     draw();
 }
 
