@@ -8,7 +8,31 @@
         <link rel="stylesheet" type="text/css" href="css.css">
     </head>
     <body>
-        <h1>Números</h1>
+        <table>
+            <tr>
+                <td>a:</td>
+                <td>b:</td>
+                <td>m:</td>
+                <td>Semente:</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="a" value="123456789">
+                </td>
+                <td>
+                    <input type="number" id="b" value="12345">
+                </td>
+                <td>
+                    <input type="number" id="m" value="2147483648">
+                </td>
+                <td>
+                    <input type="number" id="seed" value="1234568798798">
+                </td>
+                <td>
+                    <button onclick="load()" class="button button2">Gerar</button>
+                </td>
+            </tr>
+        </table>
         <canvas id="canvas"></canvas>
         <script type="text/javascript" src="numbers.js"></script>
     </body>

@@ -3,21 +3,27 @@ var a = 123456789,
     m = Math.pow(2,31),
     seed = 1234568798798; //x0, ou xAnterior na função em java
 
+var y = 0;
+
+var canvas = document.getElementById("canvas"),
+    ctxCanvas = canvas.getContext("2d");
+canvas.width = 1050;
+canvas.height = 480;
+
 function gerador(){
     seed = (a * seed + b) % m;
     return seed;
 }
 
-var canvas = document.getElementById("canvas"),
-    ctxCanvas = canvas.getContext("2d");
-
-var div = document.getElementById("div");
-
-var numeros = [];
-var y = 0;
-
-canvas.width = screen.width - 100;
-canvas.height = 500;
+function load(){
+    ctxCanvas.clearRect(0, 0, canvas.width, canvas.height);
+    y=0;
+    a = document.getElementById("a").value;
+    b = document.getElementById("b").value;
+    m = document.getElementById("m").value;
+    seed = document.getElementById("seed").value;
+    draw();
+}
 
 draw();
 
