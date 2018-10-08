@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Números pseudo aleatórios
+        </title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <script src="./node_modules/chart.js/dist/Chart.min.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Multiplicador:</td>
+                <td>Incremento:</td>
+                <td>Módulo:</td>
+                <td>Semente:</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="a" value="7">
+                </td>
+                <td>
+                    <input type="number" id="b" value="1">
+                </td>
+                <td>
+                    <input type="number" id="m" value="13">
+                </td>
+                <td>
+                    <input type="number" id="seed" value="3">
+                </td>
+                <td>
+                    <button onclick="load()" class="button button2">Gerar</button>
+                </td>
+            </tr>
+        </table>
+        <canvas id="canvas"></canvas>
+        <canvas id="chart"></canvas>
+        <script type="text/javascript" src="numbers.js"></script>
+    </body>
+</html>
