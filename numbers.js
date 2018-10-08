@@ -10,6 +10,29 @@ var canvas = document.getElementById("canvas"),
 canvas.width = 1050;
 canvas.height = 480;
 
+var chart = document.getElementById("chart"),
+    ctxChart = chart.getContext("2d");
+
+function loadChart(){
+    var lbls = [], dt = [];
+    for(var i = 0; i < 200; i++){
+        lbls.push(i);
+        dt.push(gerador());
+    }
+    var myChart = new Chart(ctxChart, {
+            type: 'line',
+            data: {
+                labels: lbls,
+                datasets: [{
+                    label: '#Números pseudo-aleatórios',
+                    data: dt,
+                    backgroundColor: "rgba(0,0,255,0.5)"
+                }]
+            }
+        });
+}
+
+
 function gerador(){
     seed = (a * seed + b) % m;
     return seed;
@@ -23,9 +46,11 @@ function load(){
     m = parseInt(document.getElementById("m").value);
     seed = parseInt(document.getElementById("seed").value);
     draw();
+    loadChart();
 }
 
 draw();
+loadChart();
 
 function draw(){
     for(var x = 0; x < canvas.width; x++){
