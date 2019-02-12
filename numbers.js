@@ -1,4 +1,4 @@
-var a = 7, b = 1, m = 13, seed = 3;
+var a = 123456789, b = 12345, m = 2147483648, seed = 1234568798798;
 
 var y = 0;
 
@@ -56,7 +56,7 @@ function draw(){
         var r = 0;
         var g = 0;
         var b = n%255;
-        ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+        ctxCanvas.fillStyle = "rgb("+r+","+g+","+b+")";
         ctxCanvas.fillRect(x,y,5,5);
     }
     y+=5;
