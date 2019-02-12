@@ -53,15 +53,15 @@ draw();
 loadChart();
 
 function draw(){
-    for(var x = 0; x < canvas.width; x++){
-        var n = gerador();
+    for(var x = 0; x < canvas.width; x+=3){
+        var n = gerador();        
         var r = 0;
         var g = 0;
         var b = n%255;
-        ctx.fillStyle = "rgb("+r+","+g+","+b+")";
-        ctxCanvas.fillRect(x,y,1,1);
+        ctxCanvas.fillStyle = "rgb("+r+","+g+","+b+")";
+        ctxCanvas.fillRect(x,y,3,3);
     }
-    y++;
+    y+=3;
     if(y < canvas.height){
         requestAnimationFrame(draw);
     }
