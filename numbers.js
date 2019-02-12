@@ -53,9 +53,11 @@ loadChart();
 function draw(){
     for(var x = 0; x < canvas.width; x+=5){
         var n = gerador();
-        if( n < m/2){
-            ctxCanvas.fillRect(x,y,5,5);
-        }
+        var r = 0;
+        var g = 0;
+        var b = n%255;
+        ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+        ctxCanvas.fillRect(x,y,5,5);
     }
     y+=5;
     if(y < canvas.height){
