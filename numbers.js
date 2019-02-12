@@ -59,7 +59,6 @@ function draw(){
         var g = 0;
         var b = n%255;
         ctxCanvas.fillStyle = "rgb("+r+","+g+","+b+")";
-        console.log("rgb("+r+","+g+","+b+")");
         ctxCanvas.fillRect(x,y,3,3);
     }
     y+=3;
